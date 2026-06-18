@@ -1,6 +1,8 @@
 # CB Catalog
 
-Static live catalog generated from Atom's Zortout product cache snapshot.
+`/` is a mirrored Canva export for the exact visual layout.
 
-Secrets are not committed. `data/products.json` contains public catalog fields only:
+`/live/` is the data-backed catalog generated from Atom's Zortout cache snapshot.
+
+No API secrets are committed. The live catalog ships public catalog fields only:
 SKU, name, sell price, available stock, tag, category, and product image URL.
