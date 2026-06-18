@@ -6,7 +6,7 @@
     <title>CB Catalog Sample</title>
     <meta
       name="description"
-      content="Sample poster page that matches the Canva menu more closely while staying synced to Zortout stock."
+      content="Poster-style page cloned from the Canva menu preview and synced to selected Zortout stock groups."
     />
     <link rel="stylesheet" href="../_assets/static_font_4.ltr.css" />
     <link rel="stylesheet" href="sample.css" />
@@ -16,11 +16,7 @@
       <section class="poster">
         <header class="poster-top">
           <div class="brand">
-            <img
-              class="brand-mark"
-              src="../_assets/images/e53c4bd8da5e491d9ab09e7cf0daf874.png"
-              alt="CB logo"
-            />
+            <div class="brand-glyph">CB</div>
             <div class="brand-copy">
               <div class="brand-name">CB Gadget</div>
               <div class="brand-sub">Thailand</div>
@@ -29,104 +25,74 @@
           <div class="title-pill">Menu รายการสินค้า</div>
         </header>
 
-        <section class="hero">
-          <div class="hero-copy">
-            <div class="hero-kicker">สินค้าเข้าใหม่</div>
-            <h1>Relx Creator / Muro</h1>
-            <p>ตัวอย่างหน้าเว็บที่ล้อหน้าโปสเตอร์เมนูเดิม และผูกสถานะ stock จริงจาก Zortout</p>
-          </div>
-          <div class="hero-visuals">
-            <figure class="hero-card accent-left">
-              <img
-                id="hero-primary-image"
-                alt="สินค้าเด่น"
-                loading="eager"
-              />
-            </figure>
-            <figure class="hero-card accent-right">
-              <img
-                id="hero-secondary-image"
-                alt="สินค้าเด่น"
-                loading="eager"
-              />
-            </figure>
-          </div>
-        </section>
+        <section class="promo-row">
+          <article class="promo-card left">
+            <img src="assets/nexbar20.png" alt="Nexbar 20k" loading="eager" />
+            <div class="promo-title">NEXBAR 20K</div>
+            <div class="promo-price">340.-</div>
+          </article>
 
-        <section id="banner-strip" class="banner-strip" aria-label="สินค้าเด่น"></section>
+          <article class="promo-card center">
+            <img src="assets/creator-device.png" alt="Relx Creator device" loading="eager" />
+            <div class="promo-title">Relx Creator</div>
+            <div class="promo-meta">เครื่องดึง 270.-</div>
+            <div class="promo-price small">เฉพาะหัว 340.-</div>
+          </article>
+
+          <article class="promo-card right">
+            <img src="assets/creator-puffs.png" alt="Relx Creator 18000 puffs" loading="eager" />
+            <div class="promo-title">Relx Creator<br />18000 Puffs</div>
+            <div class="promo-price">เฉพาะหัว 340.-</div>
+          </article>
+        </section>
 
         <section class="columns">
           <article class="column">
             <header class="column-head">
-              <h2>Marbo 9k</h2>
+              <h2>NEXBAR 20K</h2>
               <div class="price">340.-</div>
             </header>
-            <ul id="marbo-list" class="flavor-list"></ul>
+            <ul id="nexbar20-list" class="flavor-list two-col" data-limit="10"></ul>
+
+            <div class="product-block product-block-gap">
+              <div class="block-hero">
+                <img src="assets/go12k.png" alt="Relx Go 12k" loading="lazy" />
+              </div>
+              <header class="column-head compact-head">
+                <h3>Relx GO 12k</h3>
+                <div class="price small">290.-</div>
+              </header>
+              <ul id="go-list" class="flavor-list compact two-col" data-limit="12"></ul>
+            </div>
           </article>
 
           <article class="column">
             <header class="column-head">
-              <h2>M Switch15k</h2>
+              <h2>Relx Creator</h2>
               <div class="stack-price">
-                <span>เครื่องเปล่า 240.-</span>
-                <span>พร้อมสูบ 490.-</span>
+                <span>เครื่องดึง 270.-</span>
                 <span>เฉพาะหัว 340.-</span>
               </div>
             </header>
-            <div class="split-block">
-              <h3>พร้อมสูบ</h3>
-              <ul id="ms-ready-list" class="flavor-list compact"></ul>
-            </div>
-            <div class="split-block">
-              <h3>เฉพาะหัว</h3>
-              <ul id="ms-head-list" class="flavor-list compact"></ul>
-            </div>
+            <ul id="creator-device-list" class="flavor-list compact"></ul>
           </article>
 
           <article class="column">
             <header class="column-head">
-              <h2>Holdem 22k</h2>
-              <div class="price">279.-</div>
+              <h2>Relx Creator<br />18000 Puffs</h2>
+              <div class="price">เฉพาะหัว 340.-</div>
             </header>
-            <ul id="holdem-list" class="flavor-list"></ul>
+            <ul id="creator-puffs-list" class="flavor-list compact"></ul>
 
-            <div class="subpanel">
-              <header class="subpanel-head">
-                <h3>หัว Nexbar 15k</h3>
-                <div class="subprice">280.-</div>
-              </header>
-              <p class="subnote">(ใช้ได้กับเครื่อง M Switch)</p>
-              <ul id="nexbar-head-list" class="flavor-list compact"></ul>
-            </div>
-          </article>
-        </section>
-
-        <section class="wide-band">
-          <article class="wide-card">
-            <header class="wide-head">
-              <h2>M Bar 10k</h2>
-              <div class="price">360.-</div>
-            </header>
-            <ul id="m10-list" class="flavor-grid"></ul>
-          </article>
-
-          <article class="wide-card">
-            <header class="wide-head">
-              <h2>Relx GO / Novo</h2>
-              <div class="stack-price small">
-                <span>GO 12k 290.-</span>
-                <span>Novo 14k 330.-</span>
+            <div class="product-block product-block-gap">
+              <div class="block-hero">
+                <img src="assets/novo14k.png" alt="Relx Novo 14k" loading="lazy" />
               </div>
-            </header>
-            <div class="duo-lists">
-              <div>
-                <h3>Relx GO 12k</h3>
-                <ul id="go-list" class="flavor-list compact"></ul>
-              </div>
-              <div>
+              <header class="column-head compact-head">
                 <h3>Relx Novo 14k</h3>
-                <ul id="novo-list" class="flavor-list compact"></ul>
-              </div>
+                <div class="price small">330.-</div>
+              </header>
+              <ul id="novo-list" class="flavor-list compact two-col" data-limit="8"></ul>
             </div>
           </article>
         </section>
