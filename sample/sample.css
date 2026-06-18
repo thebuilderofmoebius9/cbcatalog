@@ -57,16 +57,11 @@ body {
 }
 
 .brand-mark {
-  display: grid;
-  place-items: center;
   width: 54px;
-  height: 36px;
-  border-radius: 12px;
-  background: linear-gradient(135deg, #ff4338, #b30000);
-  color: #fff;
-  font-weight: 900;
-  font-size: 18px;
-  font-family: "Arial Black", "Canva Sans", sans-serif;
+  height: 54px;
+  border-radius: 50%;
+  object-fit: contain;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.28);
 }
 
 .brand-name,
@@ -162,6 +157,25 @@ body {
   height: 100%;
   object-fit: contain;
   padding: 18px 12px 0;
+}
+
+.banner-strip {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 10px;
+  padding: 10px;
+  border-block: 2px solid var(--line);
+  background: rgba(255, 255, 255, 0.07);
+}
+
+.banner-strip img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1.45;
+  object-fit: contain;
+  padding: 6px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.12);
 }
 
 .accent-left {
@@ -366,7 +380,8 @@ body {
   }
 
   .flavor-grid,
-  .duo-lists {
+  .duo-lists,
+  .banner-strip {
     grid-template-columns: 1fr;
   }
 }

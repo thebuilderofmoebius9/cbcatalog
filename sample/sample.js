@@ -29,6 +29,19 @@ function renderList(target, items) {
   }).join("");
 }
 
+function renderBanner(target, groups) {
+  const seen = new Set();
+  const images = groups.flat().filter((item) => {
+    if (!item.image || seen.has(item.image)) return false;
+    seen.add(item.image);
+    return true;
+  }).slice(0, 5);
+
+  target.innerHTML = images
+    .map((item) => `<img src="${item.image}" alt="${normalizeName(item.name)}" loading="lazy" />`)
+    .join("");
+}
+
 function pickByPrefix(products, prefix) {
   return products.filter((product) => product.sku.startsWith(prefix)).sort(byStockThenName);
 }
@@ -63,6 +76,7 @@ async function init() {
   renderList(document.querySelector("#m10-list"), m10);
   renderList(document.querySelector("#go-list"), go);
   renderList(document.querySelector("#novo-list"), novo);
+  renderBanner(document.querySelector("#banner-strip"), [marbo, mSwitchReady, mSwitchHead, m10, go, novo]);
 
   const heroPrimary = m10.find((item) => item.image) || marbo.find((item) => item.image);
   const heroSecondary = marbo.find((item) => item.image) || m10.find((item) => item.image);
