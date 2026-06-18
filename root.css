@@ -1,0 +1,264 @@
+:root {
+  color-scheme: dark;
+  --bg-0: #0a0d13;
+  --bg-1: #6d7486;
+  --panel: rgba(18, 22, 32, 0.86);
+  --panel-2: rgba(255, 255, 255, 0.08);
+  --ink: #ffffff;
+  --muted: #d4d9e4;
+  --accent: #ff3131;
+  --line: rgba(255, 255, 255, 0.16);
+  --shadow: 0 20px 60px rgba(0, 0, 0, 0.42);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at 18% 0%, rgba(255, 81, 81, 0.22), transparent 28rem),
+    linear-gradient(180deg, var(--bg-1) 0%, #2b303c 16%, var(--bg-0) 54%, #05070b 100%);
+  color: var(--ink);
+  font-family: "Canva Sans", "Noto Sans Thai", Tahoma, sans-serif;
+}
+
+.poster {
+  width: min(1180px, calc(100% - 20px));
+  margin: 0 auto;
+  padding: 18px 0 32px;
+}
+
+.hero,
+.bands,
+.spotlight,
+.catalog-grid,
+.footer {
+  width: 100%;
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 16px;
+  align-items: end;
+  padding: 14px 18px 22px;
+}
+
+.eyebrow,
+.band-title,
+.hero-link,
+.menu-card header,
+.price,
+.price-stack {
+  font-family: "Arial Black", "Canva Sans", sans-serif;
+}
+
+.eyebrow {
+  display: inline-block;
+  margin-bottom: 8px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: var(--accent);
+  font-size: 12px;
+}
+
+.hero h1 {
+  margin: 0;
+  font-size: clamp(52px, 10vw, 110px);
+  line-height: 0.88;
+  letter-spacing: 0;
+}
+
+.hero p {
+  margin: 10px 0 0;
+  max-width: 680px;
+  color: var(--muted);
+  font-size: 18px;
+}
+
+.hero-link {
+  align-self: center;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 164px;
+  min-height: 72px;
+  padding: 12px 16px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  color: var(--ink);
+  text-decoration: none;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.bands {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  padding: 0 18px 12px;
+}
+
+.band-title {
+  font-size: 28px;
+}
+
+.band-title.center {
+  text-align: center;
+}
+
+.spotlight {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  padding: 0 18px 18px;
+}
+
+.spot-card,
+.menu-card {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.02));
+  box-shadow: var(--shadow);
+}
+
+.spot-card {
+  overflow: hidden;
+}
+
+.spot-card img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  background: rgba(0, 0, 0, 0.18);
+}
+
+.spot-body {
+  padding: 12px;
+}
+
+.spot-name {
+  min-height: 48px;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.spot-meta {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.catalog-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  padding: 0 18px;
+}
+
+.menu-card {
+  padding: 14px;
+}
+
+.menu-card.wide {
+  grid-column: span 3;
+}
+
+.menu-card.tall {
+  grid-row: span 2;
+}
+
+.menu-card header {
+  display: flex;
+  justify-content: space-between;
+  gap: 14px;
+  align-items: start;
+  margin-bottom: 12px;
+}
+
+.menu-card h2 {
+  margin: 0;
+  font-size: 30px;
+}
+
+.price,
+.price-stack {
+  color: var(--ink);
+  text-align: right;
+  font-size: 24px;
+}
+
+.price-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  font-size: 20px;
+}
+
+.flavor-list {
+  margin: 0;
+  padding-left: 18px;
+  color: var(--muted);
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+.flavor-list.columns {
+  columns: 2;
+  column-gap: 28px;
+}
+
+.flavor-list li {
+  break-inside: avoid;
+  margin-bottom: 4px;
+}
+
+.flavor-list li.out {
+  text-decoration: line-through;
+  opacity: 0.58;
+}
+
+.flavor-list li.low {
+  color: #ffd38a;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 18px;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.footer a {
+  color: var(--ink);
+}
+
+@media (max-width: 980px) {
+  .spotlight,
+  .catalog-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .menu-card.wide,
+  .menu-card.tall {
+    grid-column: auto;
+    grid-row: auto;
+  }
+
+  .flavor-list.columns {
+    columns: 1;
+  }
+
+  .bands,
+  .hero {
+    grid-template-columns: 1fr;
+  }
+}
