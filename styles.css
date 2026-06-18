@@ -1,0 +1,237 @@
+:root {
+  color-scheme: dark;
+  --bg: #090b10;
+  --panel: #141823;
+  --ink: #ffffff;
+  --muted: #aeb6c6;
+  --line: rgba(255, 255, 255, 0.14);
+  --red: #ff3131;
+  --orange: #ff7a3d;
+  --green: #3dff9b;
+  --shadow: 0 24px 80px rgba(0, 0, 0, 0.42);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at 20% 0%, rgba(255, 49, 49, 0.22), transparent 32rem),
+    linear-gradient(135deg, #6d7486 0%, #11151f 42%, #050609 100%);
+  color: var(--ink);
+  font-family: "Arial Black", "Noto Sans Thai", "Tahoma", sans-serif;
+}
+
+.hero {
+  min-height: 34vh;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 2rem;
+  align-items: end;
+  padding: clamp(2rem, 6vw, 5rem);
+  border-bottom: 1px solid var(--line);
+}
+
+.label {
+  display: inline-block;
+  padding: 0.45rem 0.7rem;
+  background: var(--red);
+  border-radius: 999px;
+  font-size: 0.78rem;
+  letter-spacing: 0;
+}
+
+h1 {
+  margin: 0.45rem 0 0;
+  font-size: clamp(3.4rem, 13vw, 9rem);
+  line-height: 0.9;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+p {
+  max-width: 44rem;
+  color: var(--muted);
+  font-family: "Noto Sans Thai", Tahoma, sans-serif;
+  font-size: clamp(1rem, 2vw, 1.3rem);
+}
+
+.stats {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.stats div {
+  min-width: 8rem;
+  padding: 1rem;
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+}
+
+.stats strong {
+  display: block;
+  font-size: 2rem;
+}
+
+.stats span,
+footer,
+.toggle,
+select,
+input {
+  font-family: "Noto Sans Thai", Tahoma, sans-serif;
+}
+
+main {
+  width: min(1180px, calc(100% - 2rem));
+  margin: 0 auto;
+  padding: 1.25rem 0 3rem;
+}
+
+.toolbar {
+  position: sticky;
+  top: 0;
+  z-index: 5;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(10rem, 15rem) auto;
+  gap: 0.75rem;
+  padding: 1rem 0;
+  backdrop-filter: blur(18px);
+}
+
+input,
+select,
+.toggle {
+  min-height: 3rem;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: rgba(10, 13, 19, 0.82);
+  color: var(--ink);
+  padding: 0 0.9rem;
+  font-size: 1rem;
+}
+
+.toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.spotlight {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  margin: 0.5rem 0 1rem;
+}
+
+.feature,
+.card {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: linear-gradient(150deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.04));
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+
+.feature {
+  min-height: 13rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  padding: 1rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+  gap: 1rem;
+}
+
+.card {
+  min-height: 22rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.media {
+  height: 12rem;
+  display: grid;
+  place-items: center;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.18), rgba(0, 0, 0, 0.16));
+}
+
+.media img {
+  max-width: 92%;
+  max-height: 92%;
+  object-fit: contain;
+  filter: drop-shadow(0 1rem 1.3rem rgba(0, 0, 0, 0.45));
+}
+
+.body {
+  padding: 0.95rem;
+}
+
+.sku,
+.tag,
+.stock,
+footer {
+  color: var(--muted);
+  font-size: 0.82rem;
+}
+
+.name {
+  min-height: 3.2rem;
+  margin: 0.35rem 0;
+  font-size: 1rem;
+  line-height: 1.25;
+}
+
+.price {
+  color: var(--ink);
+  font-size: 1.7rem;
+  line-height: 1;
+}
+
+.stock.ok {
+  color: var(--green);
+}
+
+.stock.low {
+  color: var(--orange);
+}
+
+.stock.out {
+  color: var(--red);
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.5rem clamp(1rem, 6vw, 5rem);
+  border-top: 1px solid var(--line);
+}
+
+@media (max-width: 780px) {
+  .hero,
+  .toolbar,
+  .spotlight {
+    grid-template-columns: 1fr;
+  }
+
+  .stats {
+    width: 100%;
+  }
+
+  .stats div {
+    flex: 1;
+  }
+
+  footer {
+    flex-direction: column;
+  }
+}

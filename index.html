@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="th">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>CB Catalog</title>
+    <meta name="description" content="CB Catalog live menu from Zortout stock snapshot" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <div class="brand">
+        <span class="label">CB MENU</span>
+        <h1>CB Catalog</h1>
+        <p>เมนูสินค้าแบบเว็บสด อิงข้อมูลจาก Zortout cache</p>
+      </div>
+      <div class="stats" aria-label="catalog stats">
+        <div><strong id="stockCount">0</strong><span>พร้อมขาย</span></div>
+        <div><strong id="totalCount">0</strong><span>ทั้งหมด</span></div>
+      </div>
+    </header>
+
+    <main>
+      <section class="toolbar" aria-label="catalog controls">
+        <input id="search" type="search" placeholder="ค้นหา SKU / ชื่อ / รสชาติ" autocomplete="off" />
+        <select id="tagFilter" aria-label="filter by tag"></select>
+        <label class="toggle">
+          <input id="onlyStock" type="checkbox" checked />
+          <span>เฉพาะมีของ</span>
+        </label>
+      </section>
+
+      <section class="spotlight" id="spotlight"></section>
+      <section class="grid" id="grid" aria-live="polite"></section>
+    </main>
+
+    <footer>
+      <span id="freshness">กำลังโหลดข้อมูล</span>
+      <span>ข้อมูลราคา/สต๊อกใช้สำหรับตรวจเมนู กรุณาเช็กก่อนคีย์ออเดอร์</span>
+    </footer>
+
+    <script src="app.js" type="module"></script>
+  </body>
+</html>
