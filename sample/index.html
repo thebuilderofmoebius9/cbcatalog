@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="th">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>CB Catalog Sample</title>
+    <meta
+      name="description"
+      content="Sample poster page that matches the Canva menu more closely while staying synced to Zortout stock."
+    />
+    <link rel="stylesheet" href="../_assets/static_font_4.ltr.css" />
+    <link rel="stylesheet" href="sample.css" />
+  </head>
+  <body>
+    <main class="page-shell">
+      <section class="poster">
+        <header class="poster-top">
+          <div class="brand">
+            <div class="brand-mark">CB</div>
+            <div class="brand-copy">
+              <div class="brand-name">CB Gadget</div>
+              <div class="brand-sub">Thailand</div>
+            </div>
+          </div>
+          <div class="title-pill">Menu รายการสินค้า</div>
+        </header>
+
+        <section class="hero">
+          <div class="hero-copy">
+            <div class="hero-kicker">สินค้าเข้าใหม่</div>
+            <h1>Relx Creator / Muro</h1>
+            <p>ตัวอย่างหน้าเว็บที่ล้อหน้าโปสเตอร์เมนูเดิม และผูกสถานะ stock จริงจาก Zortout</p>
+          </div>
+          <div class="hero-visuals">
+            <figure class="hero-card accent-left">
+              <img
+                id="hero-primary-image"
+                alt="สินค้าเด่น"
+                loading="eager"
+              />
+            </figure>
+            <figure class="hero-card accent-right">
+              <img
+                id="hero-secondary-image"
+                alt="สินค้าเด่น"
+                loading="eager"
+              />
+            </figure>
+          </div>
+        </section>
+
+        <section class="columns">
+          <article class="column">
+            <header class="column-head">
+              <h2>Marbo 9k</h2>
+              <div class="price">340.-</div>
+            </header>
+            <ul id="marbo-list" class="flavor-list"></ul>
+          </article>
+
+          <article class="column">
+            <header class="column-head">
+              <h2>M Switch15k</h2>
+              <div class="stack-price">
+                <span>เครื่องเปล่า 240.-</span>
+                <span>พร้อมสูบ 490.-</span>
+                <span>เฉพาะหัว 340.-</span>
+              </div>
+            </header>
+            <div class="split-block">
+              <h3>พร้อมสูบ</h3>
+              <ul id="ms-ready-list" class="flavor-list compact"></ul>
+            </div>
+            <div class="split-block">
+              <h3>เฉพาะหัว</h3>
+              <ul id="ms-head-list" class="flavor-list compact"></ul>
+            </div>
+          </article>
+
+          <article class="column">
+            <header class="column-head">
+              <h2>Holdem 22k</h2>
+              <div class="price">279.-</div>
+            </header>
+            <ul id="holdem-list" class="flavor-list"></ul>
+
+            <div class="subpanel">
+              <header class="subpanel-head">
+                <h3>หัว Nexbar 15k</h3>
+                <div class="subprice">280.-</div>
+              </header>
+              <p class="subnote">(ใช้ได้กับเครื่อง M Switch)</p>
+              <ul id="nexbar-head-list" class="flavor-list compact"></ul>
+            </div>
+          </article>
+        </section>
+
+        <section class="wide-band">
+          <article class="wide-card">
+            <header class="wide-head">
+              <h2>M Bar 10k</h2>
+              <div class="price">360.-</div>
+            </header>
+            <ul id="m10-list" class="flavor-grid"></ul>
+          </article>
+
+          <article class="wide-card">
+            <header class="wide-head">
+              <h2>Relx GO / Novo</h2>
+              <div class="stack-price small">
+                <span>GO 12k 290.-</span>
+                <span>Novo 14k 330.-</span>
+              </div>
+            </header>
+            <div class="duo-lists">
+              <div>
+                <h3>Relx GO 12k</h3>
+                <ul id="go-list" class="flavor-list compact"></ul>
+              </div>
+              <div>
+                <h3>Relx Novo 14k</h3>
+                <ul id="novo-list" class="flavor-list compact"></ul>
+              </div>
+            </div>
+          </article>
+        </section>
+
+        <footer class="poster-footer">
+          <div id="freshness">กำลังโหลดข้อมูล</div>
+          <a href="/cbcatalog/">กลับหน้า root</a>
+        </footer>
+      </section>
+    </main>
+
+    <script src="sample.js" type="module"></script>
+  </body>
+</html>
